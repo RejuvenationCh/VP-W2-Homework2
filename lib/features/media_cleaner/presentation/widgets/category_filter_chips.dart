@@ -16,7 +16,7 @@ class CategoryFilterChips extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Widget> chips = [
       ChoiceChip(
-        label: Text('All'),
+        label: const Text('All'),
         selected: selected == null,
         onSelected: (_) => onSelected(null),
       ),
@@ -31,7 +31,7 @@ class CategoryFilterChips extends StatelessWidget {
     }
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
-      padding: EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Wrap(spacing: 8, children: chips),
     );
   }

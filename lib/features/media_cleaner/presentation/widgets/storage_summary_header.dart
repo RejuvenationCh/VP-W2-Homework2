@@ -18,7 +18,7 @@ class StorageSummaryHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -26,10 +26,10 @@ class StorageSummaryHeader extends StatelessWidget {
             '${formatSize(usedBytes)} of ${formatSize(totalBytes)} used',
             style: Theme.of(context).textTheme.titleMedium,
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           LinearProgressIndicator(value: usedBytes / totalBytes),
-          SizedBox(height: 8),
-          Row(children: [Text('Media: '), SizeBadge(bytes: mediaBytes)]),
+          const SizedBox(height: 8),
+          Row(children: [const Text('Media: '), SizeBadge(bytes: mediaBytes)]),
         ],
       ),
     );

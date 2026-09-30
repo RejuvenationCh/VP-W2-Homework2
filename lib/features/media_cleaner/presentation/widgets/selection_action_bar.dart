@@ -24,9 +24,9 @@ class SelectionActionBar extends StatelessWidget {
       child: Row(
         children: [
           Expanded(child: Text('$count selected · ${formatSize(totalBytes)}')),
-          TextButton(onPressed: onClear, child: Text('Clear')),
-          TextButton(onPressed: onOffload, child: Text('Offload')),
-          FilledButton(onPressed: onDelete, child: Text('Delete')),
+          TextButton(onPressed: onClear, child: const Text('Clear')),
+          TextButton(onPressed: onOffload, child: const Text('Offload')),
+          FilledButton(onPressed: onDelete, child: const Text('Delete')),
         ],
       ),
     );

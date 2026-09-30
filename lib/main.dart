@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'features/media_cleaner/presentation/media_cleaner_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Media Cleaner',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: true),
-      home: MediaCleanerScreen(),
+      home: const MediaCleanerScreen(),
     );
   }
 }

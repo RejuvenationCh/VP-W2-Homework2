@@ -29,7 +29,7 @@ class MediaTile extends StatelessWidget {
             width: 3,
           ),
         ),
-        padding: EdgeInsets.all(6),
+        padding: const EdgeInsets.all(6),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -45,7 +45,7 @@ class MediaTile extends StatelessWidget {
             // placeholder instead of a real thumbnail
             Expanded(child: Center(child: Icon(categoryIcon(item.category), size: 32))),
             Text(item.name, maxLines: 1, overflow: TextOverflow.ellipsis),
-            SizedBox(height: 2),
+            const SizedBox(height: 2),
             SizeBadge(bytes: item.sizeBytes),
           ],
         ),

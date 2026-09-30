@@ -38,8 +38,9 @@ class _MediaCleanerScreenState extends State<MediaCleanerScreen> {
   int _sumBytes(bool selectedOnly) {
     int total = 0;
     for (final item in _items) {
-      if (!selectedOnly || _selectedIds.contains(item.id))
+      if (!selectedOnly || _selectedIds.contains(item.id)) {
         total += item.sizeBytes;
+      }
     }
     return total;
   }
@@ -85,7 +86,7 @@ class _MediaCleanerScreenState extends State<MediaCleanerScreen> {
     final visible = _visibleItems;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Media Cleaner'),
+        title: const Text('Media Cleaner'),
         actions: [
           IconButton(
             tooltip: _sortBySize ? 'Sorted by size' : 'Sorted by date',
@@ -104,10 +105,10 @@ class _MediaCleanerScreenState extends State<MediaCleanerScreen> {
           CategoryFilterChips(selected: _filter, onSelected: _setFilter),
           Expanded(
             child: visible.isEmpty
-                ? Center(child: Text('No media'))
+                ? const Center(child: Text('No media'))
                 : GridView.builder(
-                    padding: EdgeInsets.all(16),
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    padding: const EdgeInsets.all(16),
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 3,
                       mainAxisSpacing: 8,
                       crossAxisSpacing: 8,
