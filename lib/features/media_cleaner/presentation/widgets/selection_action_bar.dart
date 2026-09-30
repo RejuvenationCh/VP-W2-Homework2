@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+
+import '../../models/media_item.dart';
+
+class SelectionActionBar extends StatelessWidget {
+  final int count;
+  final int totalBytes;
+  final VoidCallback onDelete;
+  final VoidCallback onOffload;
+  final VoidCallback onClear;
+
+  const SelectionActionBar({
+    super.key,
+    required this.count,
+    required this.totalBytes,
+    required this.onDelete,
+    required this.onOffload,
+    required this.onClear,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomAppBar(
+      child: Row(
+        children: [
+          Expanded(child: Text('$count selected · ${formatSize(totalBytes)}')),
+          TextButton(onPressed: onClear, child: Text('Clear')),
+          TextButton(onPressed: onOffload, child: Text('Offload')),
+          FilledButton(onPressed: onDelete, child: Text('Delete')),
+        ],
+      ),
+    );
+  }
+}
